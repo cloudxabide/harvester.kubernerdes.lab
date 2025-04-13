@@ -1,0 +1,30 @@
+---
+scheme_version: 1
+token: token # Replace with a desired token
+os:
+  hostname: node1 # Set a hostname. This can be omitted if DHCP server offers hostnames
+  ssh_authorized_keys:
+  - ssh-rsa ... # Replace with your public key
+  password: Passw0rd01
+  ntp_servers:
+  - 0.suse.pool.ntp.org
+  - 1.suse.pool.ntp.org
+  - 2.suse.pool.ntp.org
+install:
+  mode: create
+  management_interface: # available as of v1.1.0
+    interfaces:
+      - name: eth0 
+    default_route: true
+    method: dhcp
+    bond_options:
+      mode: balance-tlb
+      miimon: 100
+  device: /dev/sda # The target disk to install
+  data_disk: /dev/sdb # It is recommended to use a separate disk to store VM data
+  iso_url: http://10.10.12.11/harvester/harvester-${HARVSTER_VERSION}-amd64.iso
+#  tty: ttyS1,115200n8   # For machines without a VGA console
+
+  vip: 10.10.12.220        # The VIP to access the Harvester GUI. Make sure the IP is free to use
+  vip_mode: static        # Or dhcp, check configuration file for more information
+#  vip_hw_addr: 52:54:00:ec:0e:0b   # Leave empty when vip_mode is static
