@@ -1,0 +1,5 @@
+# Node Name, mac address, ip address, OS device, data device
+node1,,10.10.12.200,/dev/sda,/dev/nvme01
+node2,,10.10.12.200,/dev/sda,/dev/nvme01
+node3,,10.10.12.200,/dev/sda,/dev/nvme01
+
