@@ -15,5 +15,5 @@ You should be able to cd to the Scripts directory and follow the script numerica
 
 ## References
 https://www.suse.com/suse-harvester/support-matrix/all-supported-versions/harvester-v1-4-x/
-https://docs.harvesterhci.io/v1.1/install/pxe-boot-install/
+https://docs.harvesterhci.io/v1.4/install/pxe-boot-install
 https://github.com/harvester/harvester/releases

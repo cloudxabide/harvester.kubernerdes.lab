@@ -1,5 +1,5 @@
-# Node Name, mac address, ip address, OS device, data device
-node1,,10.10.12.200,/dev/sda,/dev/nvme01
-node2,,10.10.12.200,/dev/sda,/dev/nvme01
-node3,,10.10.12.200,/dev/sda,/dev/nvme01
+# Node Name, role, mac address, ip address, OS device, data device
+node1,create,,10.10.12.221,/dev/sda,/dev/nvme01
+node2,join,,10.10.12.222,/dev/sda,/dev/nvme01
+node3,join,,10.10.12.223,/dev/sda,/dev/nvme01
 

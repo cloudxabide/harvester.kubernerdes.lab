@@ -1,0 +1,4 @@
+#!ipxe
+kernel harvester-${HARVESTER_VERSION}-vmlinuz ip=dhcp net.ifnames=1 rd.cos.disable rd.noverifyssl console=tty1 root=live:http://10.10.12.10/harvester/stable/harvester-${HARVESTER_VERSION}-rootfs-amd64.squashfs harvester.install.automatic=true harvester.install.config_url=http://10.10.12.10/harvester/stable/config-create.yaml
+initrd harvester-${HARVESTER_VERSION}-initrd
+boot

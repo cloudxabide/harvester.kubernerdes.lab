@@ -1,0 +1,25 @@
+scheme_version: 1
+server_url: https://10.10.12.220:443  # Should be the VIP set up in "CREATE" config
+token: token
+os:
+  hostname: node2
+  ssh_authorized_keys:
+    - ssh-rsa ... # Replace with your public key
+  password: Passw0rd01    # Replace with your password
+  dns_nameservers:
+  - 1.1.1.1
+  - 8.8.8.8
+install:
+  mode: join
+  management_interface: # available as of v1.1.0
+    interfaces:
+      - name: eth0 
+    default_route: true
+    method: dhcp
+    bond_options:
+      mode: balance-tlb
+      miimon: 100
+  device: /dev/sda # The target disk to install
+  data_disk: /dev/sdb # It is recommended to use a separate disk to store VM data
+  iso_url: http://10.10.12.11/harvester/harvester-${HARVESTER_VERSION}-amd64.iso
+#  tty: ttyS1,115200n8   # For machines without a VGA console
